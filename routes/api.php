@@ -21,8 +21,8 @@ Route::prefix('v1')->group(function () {
     Route::get('/public/{slug}',[FrontController::class,'categoria']);
 
     //prefijo de login y registro va a ser auth
-    Route::get('/auth/register',[AuthController::class,'register']);
-    Route::get('/auth/login',[AuthController::class,'login']);
+    Route::post('/auth/register',[AuthController::class,'register']);
+    Route::post('/auth/login',[AuthController::class,'login']);
 
     //rutas privadas
     // a estas rutas si le vamos a poner autentificacion
